@@ -1,0 +1,61 @@
+---
+import { Content as Profile } from "/src/content/profile.md";
+---
+
+<div class="profile-section">
+    <div class="profile-image">
+        <img src="/icon.jpg" alt="me" class="circular-image" />
+    </div>
+    <Profile />
+</div>
+
+<style>
+    .profile-section {
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-image {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .circular-image {
+        width: 250px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .profile-section :global(h1),
+    .profile-section :global(h2),
+    .profile-section :global(h3),
+    .profile-section :global(h4),
+    .profile-section :global(h5),
+    .profile-section :global(h6) {
+        color: #333;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        padding-left: 1rem;
+        border-left: 6px solid #333;
+    }
+
+    .profile-section :global(p) {
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+
+    .profile-section :global(a) {
+        color: #333;
+        text-decoration: underline;
+    }
+
+    .profile-section :global(a:hover) {
+        text-decoration: none;
+    }
+</style> 

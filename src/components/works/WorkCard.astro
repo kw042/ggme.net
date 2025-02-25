@@ -1,0 +1,94 @@
+---
+interface Props {
+  work: {
+    frontmatter: {
+      title: string;
+      description: string;
+      image?: string;
+      slug: string;
+      date?: string;
+    };
+  };
+}
+
+const { work } = Astro.props;
+---
+
+<div class="work-card">
+  <a href={`/works/${work.frontmatter.slug}`} class="work-link">
+    {work.frontmatter.image && (
+      <div class="work-image-container">
+        <img 
+          src={work.frontmatter.image} 
+          alt={work.frontmatter.title} 
+          class="work-image"
+        />
+      </div>
+    )}
+    <div class="work-info">
+      <h2 class="work-title">{work.frontmatter.title}</h2>
+      <p class="work-description">{work.frontmatter.description}</p>
+      {work.frontmatter.date && (
+        <div class="work-meta">
+          <span class="work-date">
+            {new Date(work.frontmatter.date).toLocaleDateString('ja-JP', { 
+              year: 'numeric', 
+              month: '2-digit', 
+              day: '2-digit' 
+            }).replace(/\//g, '-')}
+          </span>
+        </div>
+      )}
+    </div>
+  </a>
+</div>
+
+<style>
+  .work-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+
+  .work-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .work-link {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .work-image-container {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  .work-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .work-info {
+    padding: 1rem;
+  }
+
+  .work-title {
+    margin: 0;
+    font-size: 1.25rem;
+    color: #333;
+  }
+
+  .work-description {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .work-meta {
+    font-size: 0.8rem;
+    color: #999;
+  }
+</style>

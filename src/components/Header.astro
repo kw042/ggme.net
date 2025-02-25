@@ -1,0 +1,33 @@
+---
+import Navigation from './Nav.astro';
+---
+<header>
+  <nav>
+    <Navigation />
+  </nav>
+</header>
+
+<style>
+  header {
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    header {
+      padding: 0.8rem 1rem;
+    }
+  }
+</style>

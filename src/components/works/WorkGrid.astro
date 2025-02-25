@@ -1,0 +1,26 @@
+---
+/**
+ * @typedef {Object} Props
+ * @property {Array<Object>} works
+ */
+
+/** @type {Props} */
+const { works } = Astro.props;
+import WorkCard from './WorkCard.astro';
+---
+
+<div class="works-grid">
+  {works.map((work) => (
+    <WorkCard work={work} />
+  ))}
+</div>
+
+<style>
+  .works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 430px);
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+  }
+</style> 

@@ -1,0 +1,40 @@
+---
+const { frontmatter } = Astro.props;
+---
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{frontmatter.title}</title>
+  </head>
+  <body>
+    <article>
+      <h1>{frontmatter.title}</h1>
+      {frontmatter.image && (
+        <img 
+          src={frontmatter.image} 
+          alt={frontmatter.title} 
+          class="work-main-image"
+        />
+      )}
+      <div class="work-content">
+        <slot />
+      </div>
+    </article>
+  </body>
+</html>
+
+<style>
+  .work-main-image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+  }
+  
+  .work-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+</style> 

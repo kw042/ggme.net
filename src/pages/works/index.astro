@@ -1,0 +1,10 @@
+---
+import Common from "../../layouts/Common.astro"
+import WorkGrid from "../../components/works/WorkGrid.astro";
+
+const allPosts = await Astro.glob('/src/content/works/*.md');
+---
+
+<Common title='Works'>
+  <WorkGrid works={allPosts} />
+</Common>

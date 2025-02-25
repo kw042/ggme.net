@@ -1,0 +1,75 @@
+<footer id="footer">
+    <ul class='sns-btn'>
+      <li><a href='https://github.com/kw042/'><img src='/logo/github.svg' alt='github'></a></li>
+      <li><a href='https://x.com/uectnk'><img src='/logo/x.svg' alt='twitter'></a></li>
+    </ul>
+</footer>
+
+<script>
+/*--------------------------------------------------------------------------*
+    *  
+    *  footerFixed.js
+    *  
+    *  MIT-style license. 
+    *  
+    *  2007 Kazuma Nishihata [to-R]
+    *  http://blog.webcreativepark.net
+    *  
+    *--------------------------------------------------------------------------*/
+
+(function(){
+    
+    var footerId = "footer";
+    //メイン
+    function footerFixed(){
+        const footer = document.getElementById(footerId);
+        if (!footer) return;
+
+        var dh = document.getElementsByTagName("body")[0].clientHeight;
+        footer.style.top = "0px";
+        var ft = footer.offsetTop;
+        var fh = footer.offsetHeight;
+        
+        var wh = window.innerHeight || document.documentElement?.clientHeight || 0;
+
+        if(ft+fh<wh){
+            footer.style.position = "relative";
+            footer.style.top = (wh-fh-ft-1)+"px";
+        }
+    }
+    
+    //文字サイズ
+    function checkFontSize(func: () => void){
+    
+        //判定要素の追加	
+        var e = document.createElement("div");
+        var s = document.createTextNode("S");
+        e.appendChild(s);
+        e.style.visibility="hidden"
+        e.style.position="absolute"
+        e.style.top="0"
+        document.body.appendChild(e);
+        var defHeight = e.offsetHeight;
+        
+        //判定関数
+        function checkBoxSize(){
+            if(defHeight != e.offsetHeight){
+                func();
+                defHeight= e.offsetHeight;
+            }
+        }
+        setInterval(checkBoxSize,1000)
+    }
+    
+    //イベントリスナー
+    function addEvent(elm: Window | Element, listener: string, fn: EventListener) {
+        elm.addEventListener(listener, fn, false);
+    }
+
+    addEvent(window,"load",footerFixed);
+    addEvent(window,"load",function(){
+        checkFontSize(footerFixed);
+    });
+    addEvent(window,"resize",footerFixed);
+})();
+</script>

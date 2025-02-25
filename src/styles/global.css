@@ -1,0 +1,46 @@
+/* Google Fontsからの読み込み */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+/* ベースとなるフォント設定 */
+:root {
+  --font-family-base: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 
+    'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+}
+
+/* 基本フォント設定 */
+html,
+body {
+  font-family: var(--font-family-base);
+  font-weight: 400;
+  font-feature-settings: "palt"; /* プロポーショナルメトリクスを有効化 */
+}
+
+/* 見出し用のフォント設定（必要に応じて） */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+}
+
+/* フォントウェイトのユーティリティクラス */
+.font-thin {
+  font-weight: 100;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-normal {
+  font-weight: 400;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.font-black {
+  font-weight: 900;
+}
