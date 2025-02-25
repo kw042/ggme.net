@@ -6,7 +6,7 @@
   
   <script>
     function startRandomRotation() {
-      const tiles = document.querySelectorAll('.grid-item');
+      const tiles = document.querySelectorAll<HTMLElement>('.grid-item');
       const randomTile = tiles[Math.floor(Math.random() * tiles.length)];
       randomTile.classList.remove('rotate-animation');
       void randomTile.offsetWidth;

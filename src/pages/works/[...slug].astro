@@ -6,6 +6,7 @@ type Post = {
   Content: any;
   frontmatter: {
     slug: string;
+    title: string;
   };
 };
 export const getStaticPaths: GetStaticPaths = async () => {
@@ -13,6 +14,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const posts = await Astro.glob<{
     frontmatter: {
       slug: string;
+      title: string;
     };
   }>('/src/content/works/*.md');
 
