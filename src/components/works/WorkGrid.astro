@@ -4,13 +4,23 @@
  * @property {Array<Object>} works
  */
 
+interface Work {
+  frontmatter: {
+    title: string;
+    description: string;
+    image?: string;
+    slug: string;
+    date?: string;
+  };
+}
+
 /** @type {Props} */
 const { works } = Astro.props;
 import WorkCard from './WorkCard.astro';
 ---
 
 <div class="works-grid">
-  {works.map((work) => (
+  {works.map((work: Work) => (
     <WorkCard work={work} />
   ))}
 </div>
