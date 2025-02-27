@@ -2,9 +2,9 @@
 import { Content as Profile } from "/src/content/profile.md";
 ---
 
-<div class="profile-section">
+<div class="profile-section content-section">
     <div class="profile-image">
-        <img src="/icon.jpg" alt="me" class="circular-image" />
+        <img src="/images/icon.png" alt="me" class="circular-image" />
     </div>
     <Profile />
 </div>
@@ -17,31 +17,25 @@ import { Content as Profile } from "/src/content/profile.md";
         background-color: #ffffff;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        position: relative;
+        min-height: 250px;
+    }
+
+    .content {
+        margin-right: 220px;
     }
 
     .profile-image {
-        text-align: center;
-        margin-bottom: 2rem;
+        position: absolute;
+        bottom: 2rem;
+        right: 2rem;
     }
 
     .circular-image {
-        width: 250px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
         object-fit: cover;
-    }
-
-    .profile-section :global(h1),
-    .profile-section :global(h2),
-    .profile-section :global(h3),
-    .profile-section :global(h4),
-    .profile-section :global(h5),
-    .profile-section :global(h6) {
-        color: #333;
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-        padding-left: 1rem;
-        border-left: 6px solid #333;
     }
 
     .profile-section :global(p) {

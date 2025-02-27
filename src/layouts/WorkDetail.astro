@@ -9,8 +9,9 @@ const { frontmatter } = Astro.props;
     <title>{frontmatter.title}</title>
   </head>
   <body>
-    <article>
+    <article class="work-detail content-section">
       <h1>{frontmatter.title}</h1>
+      <p class="date">{frontmatter.date}</p>
       {frontmatter.image && (
         <img 
           src={frontmatter.image} 
@@ -26,15 +27,45 @@ const { frontmatter } = Astro.props;
 </html>
 
 <style>
-  .work-main-image {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-  }
-  
-  .work-content {
+  .work-detail {
     max-width: 800px;
     margin: 2rem auto;
-    padding: 0 1rem;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .work-main-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+    margin: 1rem 0;
+  }
+  
+  .date {
+    color: #666;
+    margin-bottom: 1rem;
+  }
+
+  .work-detail :global(p) {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .work-detail :global(li) {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  .work-detail :global(a) {
+    color: #333;
+    text-decoration: underline;
+  }
+
+  .work-detail :global(a:hover) {
+    text-decoration: none;
   }
 </style> 

@@ -17,10 +17,17 @@ interface Work {
 /** @type {Props} */
 const { works } = Astro.props;
 import WorkCard from './WorkCard.astro';
+
+// 日付でソート（新しい順）
+const sortedWorks = [...works].sort((a, b) => {
+  const dateA = a.frontmatter.date ? new Date(a.frontmatter.date) : new Date(0);
+  const dateB = b.frontmatter.date ? new Date(b.frontmatter.date) : new Date(0);
+  return dateB.getTime() - dateA.getTime();
+});
 ---
 
 <div class="works-grid">
-  {works.map((work: Work) => (
+  {sortedWorks.map((work: Work) => (
     <WorkCard work={work} />
   ))}
 </div>

@@ -1,0 +1,62 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<div class="page-title-container">
+  <div class="icon-container">
+    <img src="/images/home.jpg" alt="Profile Icon" class="rotating-icon" />
+  </div>
+  <div class="title-text">
+    <p class="welcome-text">Welcome to</p>
+    <h1 class="page-title">{title}</h1>
+  </div>
+</div>
+
+<style>
+  .page-title-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .icon-container {
+    margin-bottom: 1.5rem;
+  }
+
+  .rotating-icon {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    animation: rotate 20s linear infinite;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .welcome-text {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #666;
+  }
+
+  .page-title {
+    margin: 0.5rem 0 0;
+    font-size: 2.5rem;
+    color: #333;
+  }
+</style> 
