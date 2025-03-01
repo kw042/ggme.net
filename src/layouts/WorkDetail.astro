@@ -36,9 +36,17 @@ const { frontmatter } = Astro.props;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
+  @media (max-width: 768px) {
+    .work-detail {
+      margin: 1rem;
+      padding: 1rem;
+    }
+  }
+
   .work-main-image {
     width: 100%;
-    max-height: 400px;
+    max-width: 100%;
+    height: auto;
     object-fit: contain;
     margin: 1rem 0;
   }

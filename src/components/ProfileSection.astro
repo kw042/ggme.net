@@ -52,4 +52,21 @@ import { Content as Profile } from "/src/content/profile.md";
     .profile-section :global(a:hover) {
         text-decoration: none;
     }
+
+    @media (max-width: 768px) {
+        .profile-section {
+            margin: 1rem;
+            padding: 1rem;
+            min-height: auto;
+        }
+
+        .circular-image {
+            width: 100px;
+            height: 100px;
+        }
+
+        .content {
+            margin-right: 0;
+        }
+    }
 </style> 
