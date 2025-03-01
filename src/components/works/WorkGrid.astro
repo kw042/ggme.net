@@ -40,4 +40,12 @@ const sortedWorks = [...works].sort((a, b) => {
     padding: 2rem;
     justify-content: center;
   }
+
+  @media (max-width: 768px) {
+    .works-grid {
+      grid-template-columns: minmax(auto, 92%);
+      padding: 1rem;
+      gap: 1.5rem;
+    }
+  }
 </style> 
