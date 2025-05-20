@@ -5,15 +5,24 @@ pubDate: 2024-12-10
 description: '私について'
 author: 'ggme'
 ---
+## 場所について
+インターネットが好きなので個人サイトがほしかった
 
-## Profile
-- たなかといいます
-- 大学で情報工学を学んでいます
-- デジタルファブリケーションと公共インフラに興味があります
-- 美術、土木、ワニ、本、ものづくり、ゲームなどが好きです
+## 私について
+### 名前
+- たなか
 
-## SNS
+### 所属
+- 多摩科学技術高校(2021~2023)
+- 電気通信大学(2023~?)
+
+### 興味
+- 計算機支援による製造 / Computational Fabrication
+- 情報通信インフラ / Communication Infrastructure
+- AIにおける説明可能性と透明性 / Explainability and Transparency in AI
+
+### 識別子
 - [Twitter](https://twitter.com/uectnk) - @uectnk
 - [Bluesky](https://bsky.app/profile/ggme.bsky.social) - @ggme
-- [Discord]() -@ggme42
+- [Discord](https://discord.gg/z7mm6pshNy) -@ggme42
 - [GitHub](https://github.com/kw042) - @kw042
