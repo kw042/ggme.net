@@ -4,7 +4,7 @@ import rehypeExternalLinks from 'rehype-external-links';
 
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://kw042.github.io',
+    site: 'https://www.ggme.net',
     base: '/',
     markdown: {
         rehypePlugins: [
