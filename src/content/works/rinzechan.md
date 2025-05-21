@@ -2,7 +2,7 @@
 layout: ../../layouts/WorkDetail.astro
 title: "rinzechan"
 description: "アイマスのライブ申し込み締め切りの通知を行うDiscord Bot"
-image: "/images/works/rinzechan.png"
+image: "/images/works/rinzechan/top.png"
 slug: "rinzechan"
 date: "2024-11-03"
 ---
@@ -21,7 +21,7 @@ date: "2024-11-03"
 
 ## 詳細
 ### 構成のお気持ち概観
-![雑な構成図](/images/works/rinzechan_fig.png)
+![雑な構成図](/images/works/rinzechan/fig.png)
 
 
 ### スクレイピング
