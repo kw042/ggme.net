@@ -1,1 +1,24 @@
-[ホームページの時代は来るのか](https://kw042.github.io)
+# Astro Static Site
+
+[Page](https://www.ggme.net)
+
+## Overview
+
+A personal website rebuilt using Astro.
+
+* Node.js (v18 or higher)
+* npm or yarn
+* Git
+
+## Build & Preview
+
+1. **Build**
+
+   ```bash
+   npm run build
+   ```
+2. **Preview**
+
+   ```bash
+   npm run preview
+   ```
