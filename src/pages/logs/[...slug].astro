@@ -16,7 +16,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       slug: string;
       title: string;
     };
-  }>('/src/content/works/*.md');
+  }>('/src/content/logs/*.md');
 
   // 各記事のslugをparamsに設定
   return posts.map(post => ({

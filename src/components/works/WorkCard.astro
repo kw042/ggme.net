@@ -15,7 +15,7 @@ const { work } = Astro.props;
 ---
 
 <div class="work-card">
-  <a href={`/works/${work.frontmatter.slug}`} class="work-link">
+  <a href={`/logs/${work.frontmatter.slug}`} class="work-link">
     {work.frontmatter.image && (
       <div class="work-image-container">
         <img 

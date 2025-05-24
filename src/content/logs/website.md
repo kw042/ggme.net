@@ -4,7 +4,7 @@ title: "Astroでつくるウェブサイト"
 description: "いまみえているもの"
 image: "/images/works/website/top.png"
 slug: "website"
-date: "2025-01-20"
+date: "2025-05-20"
 ---
 ## 概要
 いままさに見えているこれが、個人としての私が広大で流動的な情報空間に下したひとつの錨である。
@@ -16,4 +16,4 @@ Astroという静的サイトジェネレータを使用している。むかし
 
 ## 実装
 - [Astro Tutorial](https://docs.astro.build/ja/tutorial/0-introduction/)
-- [GitHub]()
+- [GitHub](https://github.com/kw042/ggme.net)
