@@ -18,7 +18,7 @@ author: 'ggme'
 
 ### 興味
 - 計算機支援による製造 / Computational Fabrication
-- 情報通信インフラ / Communication Infrastructure
+- 情報基盤技術 / Information Infrastructure Technologies
 - AIにおける説明可能性と透明性 / Explainability and Transparency in AI
 
 ### 識別子

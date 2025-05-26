@@ -10,5 +10,8 @@ export default defineConfig({
         rehypePlugins: [
             [rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }]
         ]
+    },
+    legacy: {
+        collections: true
     }
 });

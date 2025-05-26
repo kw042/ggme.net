@@ -4,6 +4,11 @@ interface Props {
 }
 
 const { title } = Astro.props;
+// タイトルを分割するためのロジックを追加（例：「わくわくぐぐみねっと」の場合）
+const titleParts = {
+  first: "わくわく",
+  second: "ぐぐみねっと"
+};
 ---
 
 <div class="page-title-container">
@@ -12,13 +17,15 @@ const { title } = Astro.props;
   </div>
   <div class="title-text">
     <p class="welcome-text">Welcome to</p>
-    <h1 class="page-title">{title}</h1>
+    <h1 class="page-title">
+      <span class="title-first">{titleParts.first}</span><span class="title-second">{titleParts.second}</span>
+    </h1>
   </div>
 </div>
 
 <style>
   img {
-  pointer-events: none;
+    pointer-events: none;
   }
 
   .page-title-container {
@@ -63,4 +70,29 @@ const { title } = Astro.props;
     font-size: 2.5rem;
     color: #333;
   }
-</style> 
+
+  /* タイトルの改行制御用スタイル */
+  .title-first, .title-second {
+    display: inline-block;
+  }
+
+  /* モバイル用の改行設定 */
+  @media (max-width: 768px) {
+    .title-first, .title-second {
+      display: block;
+    }
+    
+    .title-first {
+      margin-bottom: 0.2rem;
+    }
+    
+    .rotating-icon {
+      width: 180px;
+      height: 180px;
+    }
+    
+    .page-title {
+      font-size: 2rem;
+    }
+  }
+</style>
