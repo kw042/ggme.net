@@ -53,6 +53,20 @@ import { Content as Profile } from "/src/content/profile.md";
         text-decoration: none;
     }
 
+    .profile-section :global(ul), 
+    .profile-section :global(ol) {
+        color: #666;
+        line-height: 1.6;
+    }
+
+    .profile-section :global(li) {
+        color: #666;
+        margin-bottom: 0.5rem;
+    }
+    .profile-section :global(li::marker) {
+    color: #777;
+    }
+
     @media (max-width: 768px) {
         .profile-section {
             margin: 1rem;

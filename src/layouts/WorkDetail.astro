@@ -56,6 +56,14 @@ const { frontmatter } = Astro.props;
     margin-bottom: 1rem;
   }
 
+  .work-detail :global(code) {
+    font-family: monospace;
+    background-color: #f5f5f5;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 1em;
+  }
+
   .work-detail :global(p) {
     color: #666;
     line-height: 1.6;
@@ -76,4 +84,4 @@ const { frontmatter } = Astro.props;
   .work-detail :global(a:hover) {
     text-decoration: none;
   }
-</style> 
+</style>
