@@ -31,61 +31,9 @@ const { Content } = post;
 ---
 
 <Common title={post.frontmatter.title}>
-  <article class="work-detail">
+  <article class="work-detail content-section">
     <div class="content">
       <Content />
     </div>
   </article>
 </Common>
-
-<style>
-  .work-detail {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
-
-  @media (max-width: 768px) {
-    .work-detail {
-      padding: 1rem;
-    }
-
-    h1 {
-      font-size: 1.5rem;
-    }
-
-    .description {
-      font-size: 1rem;
-    }
-  }
-
-  .main-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin: 1rem 0;
-  }
-
-  .description {
-    color: #666;
-    font-size: 1.1rem;
-    margin: 1rem 0;
-  }
-
-  .content {
-    margin-top: 2rem;
-  }
-
-  .content :global(img) {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin: 1rem 0;
-  }
-
-  h1 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 1rem;
-  }
-</style>

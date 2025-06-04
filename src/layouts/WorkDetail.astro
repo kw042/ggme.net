@@ -27,6 +27,7 @@ const { frontmatter } = Astro.props;
 </html>
 
 <style>
+  /* 作品詳細コンテナのメインスタイル */
   .work-detail {
     max-width: 800px;
     margin: 2rem auto;
@@ -34,15 +35,25 @@ const { frontmatter } = Astro.props;
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
   }
 
-  @media (max-width: 768px) {
-    .work-detail {
-      margin: 1rem;
-      padding: 1rem;
-    }
+  /* 見出しのスタイル */
+  h1 {
+    margin: 0.5rem 0 0;
+    font-size: 2.5rem;
+    color: #555;
+  }
+  
+  /* 日付表示のスタイル */
+  .date {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
   }
 
+  /* メイン画像のスタイル設定 */
   .work-main-image {
     width: 100%;
     max-width: 100%;
@@ -50,12 +61,22 @@ const { frontmatter } = Astro.props;
     object-fit: contain;
     margin: 1rem 0;
   }
-  
-  .date {
+
+  /* 段落のスタイル */
+  .work-detail :global(p) {
     color: #666;
+    line-height: 1.6;
     margin-bottom: 1rem;
   }
 
+  /* リスト項目のスタイル */
+  .work-detail :global(li) {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+
+  /* コードブロックのスタイル */
   .work-detail :global(code) {
     font-family: monospace;
     background-color: #f5f5f5;
@@ -64,24 +85,26 @@ const { frontmatter } = Astro.props;
     font-size: 1em;
   }
 
-  .work-detail :global(p) {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
-
-  .work-detail :global(li) {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
-  }
-
+  /* リンクのスタイル */
   .work-detail :global(a) {
     color: #333;
     text-decoration: underline;
   }
 
+  /* ホバー時のリンクスタイル */
   .work-detail :global(a:hover) {
     text-decoration: none;
+  }
+
+  /* モバイル表示用レスポンシブ設定 */
+  @media (max-width: 576px) {
+    .work-detail {
+      margin: 1rem auto;
+      padding: 1rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
   }
 </style>

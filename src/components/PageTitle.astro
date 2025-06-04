@@ -12,13 +12,7 @@ const titleParts = {
 
 <div class="page-title-container">
   <div class="icons-container">
-    <img src="/images/home.jpg" alt="Profile Icon" class="rotating-icon icon-1" />
-    <img src="/images/home.jpg" alt="Profile Icon" class="rotating-icon icon-2" />
-    <img src="/images/home.jpg" alt="Profile Icon" class="rotating-icon icon-3" />
-    <img src="/images/home.jpg" alt="Profile Icon" class="rotating-icon icon-4" />
-    <img src="/images/home.jpg" alt="Profile Icon" class="rotating-icon icon-5" />
-    <img src="/images/home.jpg" alt="Profile Icon" class="rotating-icon icon-6" />
-    <img src="/images/home.jpg" alt="Profile Icon" class="rotating-icon icon-7" />
+    <img src="/images/home.jpg" alt="Profile Icon" class="rotating-icon" />
   </div>
   <div class="title-text">
     <p class="welcome-text">Welcome to</p>
@@ -29,10 +23,12 @@ const titleParts = {
 </div>
 
 <style>
+  /* 画像のドラッグ防止 */
   img {
     pointer-events: none;
   }
 
+  /* メインコンテナのスタイル設定 */
   .page-title-container {
     max-width: 800px;
     margin: 2rem auto;
@@ -45,81 +41,26 @@ const titleParts = {
     overflow: hidden;
   }
 
+  /* アイコン配置用コンテナ */
   .icons-container {
     position: relative;
-    height: 350px;
-    margin-bottom: 1.5rem;
+    height: 200px;
+    margin-bottom: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
+  /* 回転するプロフィールアイコン */
   .rotating-icon {
-    width: 180px;
-    height: 180px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     object-fit: cover;
-    position: absolute;
-  }
-
-  .icon-1 {
-    top: 10%;
-    left: 30%;
-    z-index: 7;
     animation: rotate-clockwise 15s linear infinite;
   }
 
-  .icon-2 {
-    top: 20%;
-    left: 10%;
-    z-index: 6;
-    width: 150px;
-    height: 150px;
-    animation: rotate-counter-clockwise 20s linear infinite;
-  }
-
-  .icon-3 {
-    top: 5%;
-    right: 10%;
-    z-index: 5;
-    width: 130px;
-    height: 130px;
-    animation: rotate-clockwise 25s linear infinite;
-  }
-
-  .icon-4 {
-    bottom: 5%;
-    left: 15%;
-    z-index: 4;
-    width: 120px;
-    height: 120px;
-    animation: rotate-counter-clockwise 11s linear infinite;
-  }
-
-  .icon-5 {
-    bottom: 10%;
-    right: 15%;
-    z-index: 3;
-    width: 140px;
-    height: 140px;
-    animation: rotate-clockwise 9s linear infinite;
-  }
-
-  .icon-6 {
-    top: 40%;
-    left: 50%;
-    z-index: 2;
-    width: 110px;
-    height: 110px;
-    animation: rotate-clockwise 17s linear infinite;
-  }
-
-  .icon-7 {
-    top: 35%;
-    right: 25%;
-    z-index: 1;
-    width: 100px;
-    height: 100px;
-    animation: rotate-counter-clockwise 19s linear infinite;
-  }
-
+  /* アイコン回転アニメーション */
   @keyframes rotate-clockwise {
     from {
       transform: rotate(0deg);
@@ -129,51 +70,14 @@ const titleParts = {
     }
   }
 
-  @keyframes rotate-counter-clockwise {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(-360deg);
-    }
-  }
-
-  @keyframes rotate-bounce {
-    0% {
-      transform: rotate(0deg) scale(1);
-    }
-    50% {
-      transform: rotate(180deg) scale(1.1);
-    }
-    100% {
-      transform: rotate(360deg) scale(1);
-    }
-  }
-
-  @keyframes rotate-wobble {
-    0% {
-      transform: rotate(0deg) translateX(0px);
-    }
-    25% {
-      transform: rotate(90deg) translateX(5px);
-    }
-    50% {
-      transform: rotate(180deg) translateX(0px);
-    }
-    75% {
-      transform: rotate(270deg) translateX(-5px);
-    }
-    100% {
-      transform: rotate(360deg) translateX(0px);
-    }
-  }
-
+  /* ウェルカムテキストのスタイル */
   .welcome-text {
     margin: 0;
     font-size: 1.2rem;
     color: #666;
   }
 
+  /* ページタイトルのスタイル */
   .page-title {
     margin: 0.5rem 0 0;
     font-size: 2.5rem;
@@ -185,7 +89,7 @@ const titleParts = {
     display: inline-block;
   }
 
-  /* モバイル */
+  /* モバイル対応のレスポンシブスタイル */
   @media (max-width: 576px) {
     .title-first, .title-second {
       display: block;
@@ -194,46 +98,16 @@ const titleParts = {
     .title-first {
       margin-bottom: 0.2rem;
     }
+
+    .rotating-icon {
+      width: 200px;
+      height: 200px;
+    }
     
     .icons-container {
-      height: 250px;
+      height: 150px;
     }
-    
-    .icon-1 {
-      width: 100px;
-      height: 100px;
-    }
-    
-    .icon-2 {
-      width: 90px;
-      height: 90px;
-    }
-    
-    .icon-3 {
-      width: 80px;
-      height: 80px;
-    }
-    
-    .icon-4 {
-      width: 75px;
-      height: 75px;
-    }
-    
-    .icon-5 {
-      width: 85px;
-      height: 85px;
-    }
-    
-    .icon-6 {
-      width: 70px;
-      height: 70px;
-    }
-    
-    .icon-7 {
-      width: 65px;
-      height: 65px;
-    }
-    
+  
     .page-title {
       font-size: 2rem;
     }
